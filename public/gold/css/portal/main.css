@@ -1,0 +1,735 @@
+﻿@charset "UTF-8";
+
+section {position:relative;}
+section .inner_sec {max-width:1300px; margin:0 auto; box-sizing:border-box;}
+
+/* top visual */
+.visual_wrap {overflow:hidden; width:100%; height:880px; background-position: 50% 0; background-repeat: no-repeat; background-size:cover; background-color:#000;}
+.visual_wrap:before {display:block; content:""; position:absolute; left:0; top:0; right:0; bottom:0; z-index:10; width:100%; height:100%; background:rgba(0, 0, 0, 0.3);}
+.visual_wrap .txt_main_visual {position:absolute; left:0; right:0;  top:30%; bottom:0;  z-index:10; text-align:center; display:flex; justify-content: center; align-items: flex-start; flex-wrap:wrap;}
+.visual_wrap .txt_main_visual .txt_inner {width:100%;}
+.visual_wrap .txt_main_visual .main_title {display:inline-block; color:#fff; font-size:67px; text-align:left; line-height:1.19; font-weight:normal;}
+.visual_wrap .txt_main_visual .main_title .mob_block {display: none;}
+.visual_wrap .txt_main_visual .main_title .mob_none {display: block;}
+.visual_wrap .txt_main_visual .desc {display:block; margin: 35px 0; color:#eae1d5; font-weight:normal; font-size:25px; line-height:1.45; text-shadow:2px 2px 2px rgba(0, 0, 0, 0.3);}
+.visual_wrap .txt_main_visual .desc em {color: #fec880;}
+.visual_wrap .txt_main_visual .btn_wrap {margin:45px;}
+.visual_wrap .txt_main_visual .btn_wrap .btn {position: relative; font-size: 20px; color: #fff; width:310px; height:85px; line-height: 85px; border-radius: 3px;  transition: all .3s; box-shadow:2px 2px 10px rgba(0, 0, 0, 0.6); backface-visibility: hidden; margin: 0 10px;}
+.visual_wrap .txt_main_visual .btn_wrap .floatingBanner {position: relative; width:310px; height:85px; margin:0 10px;}
+.visual_wrap .txt_main_visual .btn_wrap .floatingBanner .btn { display: inline-flex; justify-content: center;  align-items: center; line-height: 1.4; width:100%; padding: 0 0.4rem; }
+.visual_wrap .txt_main_visual .btn_wrap .btn_grd_blue {border:1px solid #3f4a7d;}
+.visual_wrap .txt_main_visual .btn_wrap .btn_grd_blue:after {display: block; content: ''; position: absolute; left:0; top:0; right:0; height: 3px; border-top:1px solid #8196df; border-radius:3px;}
+.visual_wrap .txt_main_visual .btn_wrap .btn_grd_gray {border:1px solid #e8e8e8; color:#000;}
+.visual_wrap .txt_main_visual .btn_wrap .btn_grd_gray:after {display: block; content: ''; position: absolute; left:0; top:0; right:0; height: 3px; border-top:1px solid #fbfbfb; border-radius:3px;}
+.visual_wrap .txt_main_visual .btn_wrap .btn_grd_yellow {border:1px solid #7a6c58; text-shadow: 1px 1px 1px #505050;}
+.visual_wrap .txt_main_visual .btn_wrap .btn_grd_yellow:after {display: block; content: ''; position: absolute; left:0; top:0; right:0; height: 3px; border-top:1px solid #d1c6a1; border-radius:3px;}
+.visual_wrap .video_wrap {background-color:#000; display:block !important;}
+.visual_wrap .video_wrap video {position:absolute; left:50%; top:50%; z-index:5;  -webkit-transform: translate3d(-50%, -50%, 0); transform: translate3d(-50%, -50%, 0);  min-width: 100%; min-height: 100%;}
+.visual_wrap .video_wrap video source {    box-sizing: inherit; background-repeat: no-repeat; vertical-align: inherit;  white-space: inherit;  text-overflow: inherit;  text-shadow: inherit;}
+.visual_wrap .btn_play {display: block; width:58px; height:70px; margin: 0 auto; background:url(../../img/common/spr_etc.png) -740px -180px no-repeat; transition:transform .3s;}
+
+
+/* main news */
+.news_wrap .inner_sec {max-width:100%; padding:60px 0 40px 0;}
+.news_list {display:block;}
+.news_list.col3 .news_item {float:left; width:31.769%; margin-left:2.307%;}
+.news_list.col3 .news_item:first-child {margin-left:0;}
+.news_list .owl-stage-outer {padding: 38px 0;}
+.news_list .news_item a {display:block; position:relative; transition:all 0.25s; background-color:#f2f2f2; backface-visibility: hidden;}
+.news_list .news_item .label_area {position: absolute; left:0; top:0; z-index: 10; font-size: 0; text-align: left;}
+.news_list .news_item .label_area .tag_label {display: inline-block; font-size: 15px; min-width: 100px; height:30px; padding: 0 30px; line-height: 30px; color:rgba(255,255,255,.8); text-align: center; box-sizing: border-box;}
+.news_list .news_item .label_area .tag_label.noti {background-color:rgba(38,18,9,.65);}
+.news_list .news_item .label_area .tag_label.update {background-color:rgba(152,68,68,.65);}
+.news_list .news_item .label_area .tag_label.event {background-color:rgba(83,93,142,.65);}
+.news_list .news_item .label_area .tag_label.GMnote {background-color:rgba(178,163,143,.65);}
+.news_list .news_item .label_area .tag_label.shop {background-color:rgba(119,152,206,.65);}
+
+.news_list .news_item .img_area {position:relative; height:250px; overflow:hidden;}
+.news_list .news_item .img_area img {width:100%; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%);}
+.news_list .news_item .icon {position:absolute; left:50%; top:230px; display:inline-block; width:65px; height:65px; margin:-32.5px 0 0 -32.5px; border-radius:50%; font-size:0;}
+.news_list .news_item .icon:before {display:block; overflow:hidden; content:""; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); background:url(../../img/common/icn_cm_spr.png) 0 0 no-repeat; background-size:1600px 1600px;}
+.news_list .news_item .icon.ico_1 {background-color:#984343;}
+.news_list .news_item .icon.ico_1:before {width:24px; height:28px; background-position:0 0;}
+.news_list .news_item .icon.ico_2 {background-color:#92794e;}
+.news_list .news_item .icon.ico_2:before {width:22px; height:24px; background-position:-33px 0;}
+.news_list .news_item .icon.ico_3 {background-color:#525b85;}
+.news_list .news_item .icon.ico_3:before {width:24px; height:26px; background-position:-65px 0;}
+.news_list .news_item .icon.ico_4 {background-color:#564a44;}
+.news_list .news_item .icon.ico_4:before {width:22px; height:22px; background-position:-121px -1228px;}
+.news_list .news_item .icon.ico_5 {background-color:#7a9cd5;}
+.news_list .news_item .icon.ico_5:before {width:30px; height:26px; background-position:-164px -1228px;}
+
+.news_list .news_item .row {position:relative; height:170px; padding:30px 20px 65px 20px; box-sizing:border-box;}
+.news_list .news_item .row:before {display:none; overflow:hidden; content:""; position:absolute; left:47%; bottom:33px; transform:translate(-50%, 0) skewX(55deg); width:90px; height:10px; background-color:transparent; border-right:2px solid #686868; border-bottom:1px solid #686868;}
+.news_list .news_item .title_area {max-height:55px;}
+.news_list .news_item strong.title {position:relative;  display:block; font-size:20px; line-height:1.22; color:#000; text-align:center; box-sizing:border-box; font-weight:normal; overflow:hidden; text-overflow: ellipsis; white-space: nowrap;}
+.news_list .news_item strong.title br {display:none;}
+.news_list .news_item .desc_area {height:44px; overflow:hidden; margin-top:8px; }
+.news_list .news_item span.desc {position:relative; display:block; max-height:100%; padding-right:12px; padding-left:12px; font-size:15px; line-height:1.53; color:#494949; text-align:center;}
+.news_list .news_item span.desc:before {display:block; content:"..."; position:absolute; right:0; bottom:0;}
+.news_list .news_item span.desc:after {content:""; position:absolute; right:0; width:1em; height:1em; margin-top:0.2em; background-color:#f2f2f2; transition:all 0.25s;}
+.news_list:after {display: block; content: ''; height: 0; font-size: 0; opacity: 0; filter: alpha(opacity=0); clear: both;}
+.news_list .news_item .date { font-size:17px; color:#a4a4a4; text-align: center; margin-top:12px;}
+
+
+.news_list.owl-carousel .owl-item {transition:all 0.25s;}
+.news_list.owl-carousel .owl-item.active.center {transform:translateY(-36px);  box-shadow:0px 10px 20px 0px rgba(0, 0, 0, 0.2);}
+.news_list.owl-carousel .owl-item.active.center .news_item a {background-color:#fff;}
+.news_list.owl-carousel .owl-item.active.center .news_item span.desc:after {background-color:#fff;}
+/*
+.news_list button[role="presentation"] {position:absolute; display:inline-block; width:100px; height:100px; transition:all 0.35s;}
+.news_list button[role="presentation"]:before {display:block; overflow:hidden; content:""; overflow:hidden; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); background:url(../../img/common/spr_etc.png) 0 0 no-repeat; background-size:800px 800px;}
+.news_list button[role="presentation"].owl-prev {left:-130px; top:50%; margin-top:-50px;}
+.news_list button[role="presentation"].owl-prev:before {width:30px; height:48px; background-position:-35px 0;}
+.news_list button[role="presentation"].owl-next {right:-130px; top:50%; margin-top:-50px;}
+.news_list button[role="presentation"].owl-next:before {width:30px; height:48px; background-position:0 0;}
+.news_list button[role="presentation"] span {display:none;}
+*/
+.news_list button[role="presentation"].owl-prev,
+.news_list button[role="presentation"].owl-next {position:absolute; display:inline-block; width:80px; height:80px; transition:all 0.35s; border:1px solid #000; background-color:rgba(242,242,242,.6);  top:40%; margin-top:-50px;}
+.news_list button[role="presentation"]:before {display:block; overflow:hidden; content:""; overflow:hidden; position:absolute; top:50%;}
+.news_list button[role="presentation"].owl-prev {left:12%;}
+.news_list button[role="presentation"].owl-prev:before {width:26px; height:26px; background-color:transparent; border-left:1px solid #000; border-top:1px solid #000; transform: translate(-50%, -50%) rotate(-40deg) skew(10deg); left:60%;}
+.news_list button[role="presentation"].owl-next {right:12%;}
+.news_list button[role="presentation"].owl-next:before {width:26px; height:26px; background-color:transparent; border-left:1px solid #000; border-top:1px solid #000; transform: translate(-50%, -50%) rotate(140deg) skew(10deg); left:40%;}
+.news_list button[role="presentation"] span {display:none;}
+.news_list .owl-dots {position:absolute; left:0; bottom:0; width:100%; text-align: center;}
+.news_list .owl-dots .owl-dot {display: inline-block; width:8px; height:8px; background-color: #e1e1e1; margin: 0 6px; vertical-align: bottom;}
+.news_list .owl-dots .owl-dot.active {background-color: #2a3246;}
+
+
+/* event_section */
+.event_section {height: 700px; box-sizing:border-box; padding: 75px 30px; background:url(../../img/portal/main/main_event_section_bg.jpg) 0 0 no-repeat; -webkit-background-size: cover; background-size: cover;}
+.event_section > .inner {max-width:1300px; margin:0 auto;}
+
+.event_section a {position: relative;}
+.event_section a:after {display: block; content:''; position: absolute; left:0; top:0; width: 100%; height: 100%; background-color:rgba(255,255,255,.05); opacity: 0; transition:opacity .3s;}
+
+.event_section .title_wrap {position: relative;}
+.event_section .title_wrap:after {display: block; overflow: hidden; content: "";  transform:skewX(55deg); width: 74px; height: 10px;  margin-top: 20px; background-color: transparent; border-right: 2px solid #fff;  border-bottom: 1px solid #fff;}
+
+.event_section .event_ban > a { display: block; position: relative; height:180px; box-sizing: border-box;  margin-bottom: 14px; padding: 34px 80px;  background-repeat: no-repeat; background-position: 100% 50%; -webkit-background-size: cover; background-size: cover;}
+.event_section .event_ban > a:before {display: block; content:''; position: absolute; left:-8px; top:-8px; z-index: 2; width:106px; height:106px; background:url(../../img/portal/main/main_event_section_ban_label.png) 0 0 no-repeat;}
+.event_section .event_ban > a .title_wrap .desc {display: block; margin-bottom: 13px; font-size: 20px; font-weight: normal; color: #fff; line-height: 1;}
+.event_section .event_ban > a .title_wrap .title {display: block; font-size: 36px; font-weight: normal; color: #fff;}
+.event_section .event_ban > a .title_wrap .title strong {font-weight: normal;}
+
+.event_section .event_list ul:after {display:block; content:''; clear:both;}
+.event_section .event_list li {float:left; width:32.76%; margin-left: 0.86%;}
+.event_section .event_list li:first-child {margin-left:0;}
+.event_section .event_list li a {display: block; padding: 30px; height: 160px; box-sizing: border-box; background-position: 50% 50%;-webkit-background-size: cover; background-size: cover; }
+.event_section .event_list .title_wrap {text-align: center;}
+.event_section .event_list .title_wrap .title {display: block; font-size: 30px; font-weight: normal; color: #fff; line-height: 1; margin-bottom: 13px;}
+.event_section .event_list .title_wrap .title strong {font-weight: normal;}
+.event_section .event_list .title_wrap .desc {display: block; font-size: 16px; font-weight: normal; color:rgba(255,255,255,.6);}
+.event_section .event_list .title_wrap:after {margin: 20px auto 0; transform:translateX(-10px) skewX(55deg);}
+
+.event_section .event_ban01 {background-image:url(../../img/portal/main/main_event_section_ban01_bg.jpg);}
+.event_section .event_ban02 {background-image:url(../../img/portal/main/main_event_section_ban02_bg.jpg);}
+.event_section .event_ban03 {background-image:url(../../img/portal/main/main_event_section_ban03_bg.jpg);}
+.event_section .event_ban04 {background-image:url(../../img/portal/main/main_event_section_ban04_bg.jpg);}
+.event_section .event_ban05 {background-image:url(../../img/portal/main/main_event_section_ban05_bg.jpg);}
+.event_section .event_ban01 .title_wrap .title strong {color: #fad389;}
+.event_section .event_ban02 .title_wrap .title strong {color: #f3a2ff;}
+.event_section .event_ban03 .title_wrap .title strong {color: #ffc572;}
+.event_section .event_ban04 .title_wrap .title strong {color: #3fcfee;}
+.event_section .event_ban05 .title_wrap .title strong {color: #ff1e1e;}
+
+
+/* banner shop */
+.event_banner_wrap {position:relative; height:450px;}
+.event_banner_wrap:after {display: block; content: ''; height: 0; font-size: 0; opacity: 0; filter: alpha(opacity=0); clear: both;}
+.event_banner_wrap .benefit_area {float:left; width:47.5%; height:450px; background-color:#313b52; padding:60px 0; box-sizing:border-box; text-align:right;}
+.event_banner_wrap .benefit_area .inner {display:inline-block; width:600px; padding-right:40px; box-sizing:border-box;}
+.event_banner_wrap .benefit_area .inner:after {display: block; content: ''; height: 0; font-size: 0; opacity: 0; filter: alpha(opacity=0); clear: both;}
+.note_gm {float:left; width:310px; background-color:#415071; box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);}
+.note_gm a {position:relative; display:block;}
+.note_gm .img_area {position:relative; overflow:hidden; height:200px; transition:all 0.15s;}
+.note_gm .img_area:before {display:block; content:""; position:absolute; left:0; bottom:0; z-index:5; width:100%; height:200px; background:url(../../img/portal/main/main_gm.png) 0 0 no-repeat;}
+.note_gm .img_area:after {display:block; content:""; position:absolute; left:0; bottom:0; z-index:1; width:100%; height:200px; transition:all 0.15s; opacity:0.6; background:url(../../img/portal/main/main_gm_bg.png) 0 0 no-repeat;}
+.note_gm .img_area img {display:block; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%); width:100%;}
+
+.note_gm .desc {position:relative; height:130px; padding:22px 20px 58px 20px; box-sizing:border-box; transition:all 0.15s;}
+.note_gm .desc:before {display:block; overflow:hidden; content:""; position:absolute; left:47%; bottom:24px; transform:translate(-50%, 0) skewX(55deg); width:74px; height:10px; background-color:transparent; border-right:2px solid #fff; border-bottom:1px solid #fff;}
+.note_gm .desc strong.title {position:relative; display:block; overflow:hidden; max-height:50px; padding-right:16px; padding-left:16px; color:#fff; font-size:20px; line-height:1.25; text-align:center; font-weight:400;}
+.note_gm .desc strong.title:before {display:block; content:"..."; position:absolute; right:0; bottom:0;}
+.note_gm .desc strong.title:after {content:""; position:absolute; right:0; width:1em; height:1em; margin-top:0.2em; background-color:#415071;}
+.benefit_list {float:right; width:230px; box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.2);}
+.benefit_list li {position:relative; height:109px; margin-top:2px; background-color:#3b4761; overflow:hidden;}
+.benefit_list li:before {display:block; content:""; position:absolute; left:0; top:0; width:100%; height:100%; background-color:#4d5e85; transform:translateX(-101%); transition:all 0.15s;}
+.benefit_list li:first-child {margin-top:0;}
+.benefit_list li > a {position:relative; z-index:10; display:block; height:100%; padding-top:22px; box-sizing:border-box;}
+.benefit_list li > a:after {display:block; overflow:hidden; content:""; position:absolute; left:47%; bottom:24px; transform:translate(-50%, 0) skewX(55deg); width:74px; height:10px; background-color:transparent; border-right:2px solid rgba(255, 255, 255, 0.4); border-bottom:1px solid rgba(255, 255, 255, 0.4);}
+.benefit_list li strong.title {display:block; font-size:17px; color:#e5edff; text-align:center; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; width:80%; margin:0 auto; font-weight:normal;}
+.benefit_list li span.desc {display:block; margin:5px auto 0 auto; font-size:15px; color:#99b1d7; text-align:center; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; width:80%;}
+
+.event_banner_wrap .shop_area {float:right; width:52.5%; position:relative; z-index:15;}
+.event_banner_wrap .shop_area .cash_list {position:relative; display:block; height:450px; background-color:#544a45;}
+.event_banner_wrap .shop_area .cash_list .owl-dots {display:none;}
+.event_banner_wrap .shop_area .cash_list:after {display: block; content: ''; height: 0; font-size: 0; opacity: 0; filter: alpha(opacity=0); clear: both;}
+.event_banner_wrap .cash_item {position:relative; overflow:hidden; height:450px; background-color:#544a45;}
+.event_banner_wrap .cash_item a {display:block;}
+.event_banner_wrap .cash_item a.mob_view_item {display:none;}
+.event_banner_wrap .cash_item span {display:block; position:absolute; left:0; bottom:0;}
+.event_banner_wrap .cash_item span img { max-width:100%; max-height:100%; }
+.event_banner_wrap .cash_item span.img_txt {left:50px; z-index:5;}
+.event_banner_wrap .cash_item span.img_area img {display:block; width:auto;}
+.event_banner_wrap .cash_item a.mob_view_item span {width:100%;}
+.event_banner_wrap .cash_item a.mob_view_item span.img_area img {display:block; width:100%;}
+.event_banner_wrap .cash_item a.mob_view_item span.img_txt {left:0; top:auto; bottom:-1px; z-index:5; width:100%;}
+.event_banner_wrap .cash_item a.mob_view_item span.img_txt img {display:block; width:100%;}
+.event_banner_wrap .shop_area .owl-nav {position:absolute; bottom:80px; left:50px; z-index:10; font-size:0;}
+.event_banner_wrap .shop_area .owl-nav > button[role="presentation"] {position:relative; display:inline-block; width:55px; height:55px; box-sizing:border-box; border:1px solid rgba(255, 255, 255, 0.2); font-size:0; vertical-align:middle; transition:all 0.35s;}
+.event_banner_wrap .shop_area .owl-nav > button[role="presentation"]:before {display:block; content:""; position:absolute; top:50%;}
+.event_banner_wrap .shop_area .owl-nav > button[role="presentation"].owl-next { border-left:none;}
+.event_banner_wrap .shop_area .owl-nav > button[role="presentation"].owl-prev:before {width:18px; height:18px; background-color:transparent; border-left:2px solid #fff; border-top:2px solid #fff; transform:translate(-50%, -50%) rotate(-40deg) skew(10deg); left:60%;}
+.event_banner_wrap .shop_area .owl-nav > button[role="presentation"].owl-next:before {width:18px; height:18px; background-color:transparent; border-left:2px solid #fff; border-top:2px solid #fff; transform:translate(-50%, -50%) rotate(140deg) skew(10deg); left:40%;}
+.event_banner_wrap .shop_area .count_area {position:absolute; bottom:98px; left:180px; z-index:10; font-size:16px; color:#fff;}
+/* THE WORLD CLASS MMORPG */
+.class_mmorpg_wrap {position:relative; height:805px; background:url(../../img/portal/main/main_world_class.jpg) 50% 0 no-repeat; background-size:cover;}
+.class_mmorpg_wrap h3 {padding-top:100px; text-align:center; font-size:52px; color:#fff; line-height:1; font-weight:bold; }
+.class_mmorpg_wrap .h3_desc {display:block; margin-top:20px; font-size:15px; color:#998d86; text-align:center; line-height:1.733; letter-spacing:0.04em;}
+.class_mmorpg_wrap .h3_desc em {color:#916914; }
+.class_mmorpg_wrap .btn_more {display: inline-block; font-size: 16px; position: absolute; left:50%; bottom:70px; width:210px; height:60px; line-height: 58px; border: 1px solid rgba(255,255,255,.2); color:#fff; text-align: center; box-sizing: border-box; transform: translate(-50%,0); transition:all .3s;}
+
+.class_mmorpg_wrap .thumb_nail_area {position:relative; max-width:1230px; height:240px; margin:45px auto 0 auto; border:1px solid rgba(15,0,0,0.1); box-sizing: border-box; }
+.class_mmorpg_wrap .thumb_nail_area .big_thumb {position:absolute; left:50%; top:0; transform:translate(-50%, 0); width:45%; height:240px;}
+.class_mmorpg_wrap .thumb_nail_area a {position:relative; overflow:hidden; display:block; width:100%; height:100%; transition:all 0.35s;}
+.class_mmorpg_wrap .thumb_nail_area a:before {display:block; content:""; position:absolute; left:0; top:0; width:100%; height:100%; background-color:rgba(0, 0, 0, 0.35); transition:all 0.35s; opacity:0;}
+.class_mmorpg_wrap .thumb_nail_area .view_movie:after {display:block; content:""; overflow:hidden; position:absolute; right:10px; bottom:5px; z-index:10; width:42px; height:51px; background:url(../../img/common/spr_etc.png) -225px -243px no-repeat; background-size:800px 800px;}
+.class_mmorpg_wrap .thumb_nail_area .view_img:after {display:block; content:""; overflow:hidden; position:absolute; right:10px; bottom:5px; z-index:10; width:52px; height:53px; background:url(../../img/common/spr_etc.png) -139px -243px no-repeat; background-size:800px 800px;}
+.class_mmorpg_wrap .thumb_nail_area .big_thumb img {width:100%;}
+.class_mmorpg_wrap .thumb_nail_area .sml_thumb {position:absolute; top:0; width:27.64%; height:240px;}
+.class_mmorpg_wrap .thumb_nail_area .sml_thumb.left {left:0;}
+.class_mmorpg_wrap .thumb_nail_area .sml_thumb.right {right:0;}
+/* character */
+.character_wrap {position:relative; height:830px; background-size:cover; background-color:#000;}
+.video_area {position:relative; overflow:hidden; width:100%; height:100%; background-color:#000;}
+.video_area:before {display:block; content:""; position:absolute; left:0; top:0; z-index:1; width:100%; height:100%; background-color:transparent;}
+.video_area video {position:absolute; left:0; top:0; right:0; bottom:0; width:auto; height:100%;}
+.classes {position:absolute; left:50%; top:185px; z-index:10; transform:translate(-50%, 0); text-align:center; display:none;}
+.classes.active {display:block;}
+.classes h3 {font-size:75px; color:rgba(255, 255, 255, 0.9); line-height:1; font-weight:bold; }
+.classes .h3_desc {display:block; margin-top:20px; color:rgba(181, 181, 181, 0.8); font-size:15px; line-height:1.733; text-align:center;}
+.classes .btn_more {position:relative; display:inline-block; width:132px; height:42px; margin-top:30px; border:1px solid rgba(255, 255, 255, 0.4); font-size:0; box-sizing:border-box; transition:all 0.35s;}
+.classes .btn_more:before {display:block; overflow:hidden; content:""; position:absolute; left:47%; bottom:17px; transform:translate(-50%, 0) skewX(55deg); width:69px; height:10px; background-color:transparent; border-right:2px solid #fff; border-bottom:1px solid #fff;}
+
+.character_list {display:block; height:100%;}
+.character_list .owl-stage-outer {height:100%;}
+.character_list .owl-stage-outer .owl-stage {height:100%;}
+.character_list .owl-stage-outer .owl-stage .owl-item {height:100%;}
+.character_list .character_item {width:100%; height:100%;}
+.character_list .character_item .classes {display:block;}
+
+
+.character_list .owl-nav button[role="presentation"] {display:block; position:absolute; top:50%; z-index:10; transform:translate(0, -50%); width:72px; height:127px; font-size:0; overflow:hidden;}
+.character_list .owl-nav button[role="presentation"]:before {display:block; overflow:hidden; content:""; position:absolute; top:50%;}
+.character_list .owl-nav .owl-prev {left:60px;}
+.character_list .owl-nav .owl-prev:before {width:76px; height:76px; background-color:transparent; border-left:2px solid #849091; border-top:2px solid #849091; transform: translate(-50%, -50%) rotate(-45deg); left:85%;}
+.character_list .owl-nav .owl-next {right:60px;}
+.character_list .owl-nav .owl-next:before {width:76px; height:76px; background-color:transparent; border-left:2px solid #849091; border-top:2px solid #849091; transform: translate(-50%, -50%) rotate(135deg); left:15%;}
+
+
+.character_list .character_item {background-position: 50% 0; background-repeat: no-repeat; background-size:cover;}
+.character_list .character_item.character_0 {background-image:url(../../img/portal/main/main_character_class_0.jpg);} /* WARRIOR */
+.character_list .character_item.character_4 {background-image:url(../../img/portal/main/main_character_class_4.jpg);} /* RANGER */
+.character_list .character_item.character_12 {background-image:url(../../img/portal/main/main_character_class_12.jpg);} /* GIANT */
+.character_list .character_item.character_31 {background-image:url(../../img/portal/main/main_character_class_31.jpg);} /* WITCH */
+.character_list .character_item.character_24 {background-image:url(../../img/portal/main/main_character_class_24.jpg);} /* VALKYRIE */
+.character_list .character_item.character_16 {background-image:url(../../img/portal/main/main_character_class_16.jpg);} /* TAMER */
+.character_list .character_item.character_27 {background-image:url(../../img/portal/main/main_character_class_27.jpg);} /* DARK_KNIGHT */
+.character_list .character_item.character_19 {background-image:url(../../img/portal/main/main_character_class_19.jpg);} /* STRIKER */
+.character_list .character_item.character_8 {background-image:url(../../img/portal/main/main_character_class_8.jpg);} /* SORCERER */
+.character_list .character_item.character_20 {background-image:url(../../img/portal/main/main_character_class_20.jpg);} /* MUSA */
+.character_list .character_item.character_28 {background-image:url(../../img/portal/main/main_character_class_28.jpg);} /* WIZARD */
+.character_list .character_item.character_25 {background-image:url(../../img/portal/main/main_character_class_25.jpg);} /* KUNOICHI */
+.character_list .character_item.character_26 {background-image:url(../../img/portal/main/main_character_class_26.jpg);} /* NINJA */
+.character_list .character_item.character_23 {background-image:url(../../img/portal/main/main_character_class_23.jpg);} /* MYSTIC */
+.character_list .character_item.character_11 {background-image:url(../../img/portal/main/main_character_class_11.jpg);} /* LAHN */
+.character_list .character_item.character_29 {background-image:url(../../img/portal/main/main_character_class_29.jpg);} /* ARCHER */
+.character_list .character_item.character_21 {background-image:url(../../img/portal/main/main_character_class_21.jpg);} /* MAEHWA */
+.character_list .character_item.character_17 {background-image:url(../../img/portal/main/main_character_class_17.jpg);} /* SHAI */
+.character_list .character_item.character_5 {background-image:url(../../img/portal/main/main_character_class_5.jpg);} /* GUARDIAN */
+
+
+.character_wrap.character_0 {background-image:url(../../img/portal/main/main_character_class_0.jpg);} /* WARRIOR */
+.character_wrap.character_4 {background-image:url(../../img/portal/main/main_character_class_4.jpg);} /* RANGER */
+.character_wrap.character_12 {background-image:url(../../img/portal/main/main_character_class_12.jpg);} /* GIANT */
+.character_wrap.character_31 {background-image:url(../../img/portal/main/main_character_class_31.jpg);} /* WITCH */
+.character_wrap.character_24 {background-image:url(../../img/portal/main/main_character_class_24.jpg);} /* VALKYRIE */
+.character_wrap.character_16 {background-image:url(../../img/portal/main/main_character_class_16.jpg);} /* TAMER */
+.character_wrap.character_27 {background-image:url(../../img/portal/main/main_character_class_27.jpg);} /* DARK_KNIGHT */
+.character_wrap.character_19 {background-image:url(../../img/portal/main/main_character_class_19.jpg);} /* STRIKER */
+.character_wrap.character_8 {background-image:url(../../img/portal/main/main_character_class_8.jpg);} /* SORCERER */
+.character_wrap.character_20 {background-image:url(../../img/portal/main/main_character_class_20.jpg);} /* MUSA */
+.character_wrap.character_28 {background-image:url(../../img/portal/main/main_character_class_28.jpg);} /* WIZARD */
+.character_wrap.character_25 {background-image:url(../../img/portal/main/main_character_class_25.jpg);} /* KUNOICHI */
+.character_wrap.character_26 {background-image:url(../../img/portal/main/main_character_class_26.jpg);} /* NINJA */
+.character_wrap.character_23 {background-image:url(../../img/portal/main/main_character_class_23.jpg);} /* MYSTIC */
+.character_wrap.character_11 {background-image:url(../../img/portal/main/main_character_class_11.jpg);} /* LAHN */
+.character_wrap.character_29 {background-image:url(../../img/portal/main/main_character_class_29.jpg);} /* ARCHER */
+.character_wrap.character_21 {background-image:url(../../img/portal/main/main_character_class_21.jpg);} /* MAEHWA */
+.character_wrap.character_17 {background-image:url(../../img/portal/main/main_character_class_17.jpg);} /* SHAI */
+.character_wrap.character_5 {background-image:url(../../img/portal/main/main_character_class_5.jpg);} /* GUARDIAN */
+
+.character_wrap .btn_wrap {position:static;}
+.character_wrap .btn_wrap a {display:block; position:absolute; top:50%; z-index:10; transform:translate(0, -50%); width:72px; height:127px; font-size:0; overflow:hidden;}
+.character_wrap .btn_wrap a:before {display:block; overflow:hidden; content:""; position:absolute; left:50%; top:50%;}
+.character_wrap .btn_wrap a.btn_prev {left:60px;}
+.character_wrap .btn_wrap a.btn_next {right:60px;}
+.character_wrap .btn_wrap a.btn_prev:before {width:76px; height:76px; background-color:transparent; border-left:2px solid #849091; border-top:2px solid #849091; transform: translate(-50%, -50%) rotate(-45deg); left:85%;}
+.character_wrap .btn_wrap a.btn_next:before {width:76px; height:76px; background-color:transparent; border-left:2px solid #849091; border-top:2px solid #849091; transform: translate(-50%, -50%) rotate(135deg); left:15%;}
+.character_wrap .thumb_nail_area {position:absolute; left:50%; bottom:100px; z-index:10; transform:translate(-50%, 0); width:920px;}
+.character_wrap .thumb_nail_area ul{text-align:center; display:flex; flex-wrap:wrap;justify-content:center;}
+.character_wrap .thumb_nail_area ul li {width:82px; height:82px; margin-left:10px; margin-top:10px;}
+.character_wrap .thumb_nail_area ul li.active a {color:#fff;}
+.character_wrap .thumb_nail_area ul li:nth-child(9) {margin-right:10px;}
+.character_wrap .thumb_nail_area ul:after {display: block; content: ''; height: 0; font-size: 0; opacity: 0; filter: alpha(opacity=0); clear: both;}
+.character_wrap .thumb_nail_area ul li a {position:relative; display:block; width:100%; height:100%; font-size:0; transition:all 0.15s;}
+.character_wrap .thumb_nail_area ul li a:before {display:block; content:""; overflow:hidden; width:100%; height:100%; background:url(../../img/portal/main/icn_main_characters_spr.png) 0 0 no-repeat; background-size:726px 542px;}
+.character_wrap .thumb_nail_area ul li a.character_0:before {background-position:0 0;} /* WARRIOR */
+.character_wrap .thumb_nail_area ul li a.character_4:before {background-position:-92px 0;} /* RANGER */
+.character_wrap .thumb_nail_area ul li a.character_12:before {background-position:-182px 0;} /* GIANT */
+.character_wrap .thumb_nail_area ul li a.character_31:before {background-position:-277px 0;} /* WITCH */
+.character_wrap .thumb_nail_area ul li a.character_24:before {background-position:-368px 0;} /* VALKYRIE */
+.character_wrap .thumb_nail_area ul li a.character_16:before {background-position:-461px 0;} /* TAMER */
+.character_wrap .thumb_nail_area ul li a.character_27:before {background-position:-552px 0;} /* DARK_KNIGHT */
+.character_wrap .thumb_nail_area ul li a.character_19:before {background-position:-645px 0;} /* STRIKER */
+.character_wrap .thumb_nail_area ul li a.character_8:before {background-position:0 -92px;} /* SORCERER */
+.character_wrap .thumb_nail_area ul li a.character_20:before {background-position:-92px -92px;} /* MUSA */
+.character_wrap .thumb_nail_area ul li a.character_28:before {background-position:-182px -92px;} /* WIZARD */
+.character_wrap .thumb_nail_area ul li a.character_25:before {background-position:-277px -92px;} /* KUNOICHI */
+.character_wrap .thumb_nail_area ul li a.character_26:before {background-position:-368px -92px;} /* NINJA */
+.character_wrap .thumb_nail_area ul li a.character_23:before {background-position:-461px -92px;} /* MYSTIC */
+.character_wrap .thumb_nail_area ul li a.character_11:before {background-position:-552px -92px;} /* LAHN */
+.character_wrap .thumb_nail_area ul li a.character_29:before {background-position:-645px -92px;} /* ARCHER */
+.character_wrap .thumb_nail_area ul li a.character_21:before {background-position:0 -184px;} /* MAEHWA */
+.character_wrap .thumb_nail_area ul li a.character_17:before {background-position:-92px -184px;} /* SHAI */
+.character_wrap .thumb_nail_area ul li a.character_5:before {background-position:-182px -184px;} /* GUARDIAN */
+
+.character_wrap .thumb_nail_area ul li.active a.character_0:before {background-position:0 -276px;} /* WARRIOR */
+.character_wrap .thumb_nail_area ul li.active a.character_4:before {background-position:-92px -276px;} /* RANGER */
+.character_wrap .thumb_nail_area ul li.active a.character_12:before {background-position:-182px -276px;} /* GIANT */
+.character_wrap .thumb_nail_area ul li.active a.character_31:before {background-position:-277px -276px;} /* WITCH */
+.character_wrap .thumb_nail_area ul li.active a.character_24:before {background-position:-368px -276px;} /* VALKYRIE */
+.character_wrap .thumb_nail_area ul li.active a.character_16:before {background-position:-461px -276px;} /* TAMER */
+.character_wrap .thumb_nail_area ul li.active a.character_27:before {background-position:-552px -276px;} /* DARK_KNIGHT */
+.character_wrap .thumb_nail_area ul li.active a.character_19:before {background-position:-645px -276px;} /* STRIKER */
+.character_wrap .thumb_nail_area ul li.active a.character_8:before {background-position:0 -368px;} /* SORCERER */
+.character_wrap .thumb_nail_area ul li.active a.character_20:before {background-position:-92px -368px;} /* MUSA */
+.character_wrap .thumb_nail_area ul li.active a.character_28:before {background-position:-182px -368px;} /* WIZARD */
+.character_wrap .thumb_nail_area ul li.active a.character_25:before {background-position:-277px -368px;} /* KUNOICHI */
+.character_wrap .thumb_nail_area ul li.active a.character_26:before {background-position:-368px -368px;} /* NINJA */
+.character_wrap .thumb_nail_area ul li.active a.character_23:before {background-position:-461px -368px;} /* MYSTIC */
+.character_wrap .thumb_nail_area ul li.active a.character_11:before {background-position:-552px -368px;} /* LAHN */
+.character_wrap .thumb_nail_area ul li.active a.character_29:before {background-position:-645px -368px;} /* ARCHER */
+.character_wrap .thumb_nail_area ul li.active a.character_21:before {background-position:0 -460px;} /* MAEHWA */
+.character_wrap .thumb_nail_area ul li.active a.character_17:before {background-position:-92px -460px;} /* SHAI */
+.character_wrap .thumb_nail_area ul li.active a.character_5:before {background-position:-182px -460px;} /* GUARDIAN */
+
+
+/* multi media */
+.multi_media_wrap {position:relative; height:885px; background-color:#eceff1;}
+.multi_media_wrap h3 {padding-top:95px; font-size:60px; color:#181818;  line-height:1; text-align:center; font-weight: bold; }
+.multi_media_wrap .h3_desc {display:block; margin-top:20px; text-align:center; font-size:15px; color:#171b1d; line-height:1.733;}
+.multi_media_wrap .media_list_area {position:relative; max-width:1300px; margin:40px auto 0 auto; border:1px solid rgba(15,0,0,0.1); box-sizing: border-box;}
+.multi_media_wrap .media_list_area:after {display: block; content: ''; height: 0; font-size: 0; opacity: 0; filter: alpha(opacity=0); clear: both;}
+.multi_media_wrap .media_list_area .inner {float:left; width:50%; height:515px;}
+.multi_media_wrap .media_list_area .inner:after {display: block; content: ''; height: 0; font-size: 0; opacity: 0; filter: alpha(opacity=0); clear: both;}
+.multi_media_wrap .media_list_area span.title {display:block; position:absolute; left:25px; bottom:25px; z-index:10; width:70%; overflow:hidden; text-overflow:ellipsis; word-wrap:normal; white-space:nowrap; color:#fff; font-size:18px;}
+.multi_media_wrap .media_list_area a {position:relative; display:block; overflow:hidden; position:relative; width:100%; height:100%;}
+.multi_media_wrap .media_list_area a img {display:block; position:absolute; 50%; left:50%; top:50%; transform:translate(-50%, -50%); width:100%;}
+.multi_media_wrap .media_list_area a:after {display:block; content:""; overflow:hidden; position:absolute; right:15px; bottom:15px; z-index:3; background:url(../../img/common/spr_etc.png) 0 0 no-repeat; background-size:800px 800px;}
+.multi_media_wrap .media_list_area a.view_img:after {width:57px; height:59px; background-position:-613px -181px;}
+.multi_media_wrap .media_list_area a.view_movie:after {width:50px; height:62px; background-position:-682px -181px;}
+.multi_media_wrap .media_list_area a:before {display:block; content:""; position:absolute; left:0; top:0; z-index:2; width:100%; height:100%; background-color:rgba(0, 0, 0, 0.35); opacity:0; transition:all 0.35s;}
+.multi_media_wrap .media_list_area a.img_big img {width:101%; height:101%;}
+.multi_media_wrap .media_list_area .thumb {float:left; width:50%; height:235px;}
+.multi_media_wrap .media_list_area .thumb.wide {width:100%; height:280px;}
+.multi_media_wrap .media_list_area .thumb a {display:block; position:relative;}
+.multi_media_wrap .media_list_area .thumb a img {display:block; width:101%; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%);}
+.multi_media_wrap .media_list_area .thumb a.img_sml img {height:101%; width:auto;}
+/* join us */
+.joinus_wrap {position:relative; display:flex; justify-content:center; align-items:center; height:460px; background:url(../../img/portal/main/main_join_us.jpg) 50% 0 no-repeat; background-size:cover;}
+.joinus_wrap .inner {max-width:640px; text-align:center;transform:translate(-18vw, 0) }
+.joinus_wrap .inner h3 {font-size:55px; color:#241b14; font-weight: bold; }
+.joinus_wrap .inner .h3_desc {display:block; margin-top:20px; font-size:15px; color:#48423b; text-align:center; letter-spacing: 1px; }
+.joinus_wrap .inner .btn_wrap {margin-top:30px; font-size:0;}
+.joinus_wrap .inner .btn_wrap .btn {display:inline-block; width:265px; height:75px; border-radius:4px; font-size:19px; color:#fff; line-height:75px; text-align:center;}
+.joinus_wrap .inner .btn_wrap .btn + .btn {margin-left:10px;}
+.joinus_wrap .inner .btn_wrap .btn_blue {background-color:#30343f;}
+.joinus_wrap .inner .btn_wrap .btn_brown {background-color:#725945;}
+.joinus_wrap .inner .btn_wrap .btn_blue:before {display:none;}
+.joinus_wrap .inner .btn_wrap .btn_brown:before {display:none;}
+
+/* main a year anniversary section */
+.event_anniversary_wrap {height:452px; background:url(../../img/portal/main/bg_a_year_anniversary.jpg) center top no-repeat; background-size:cover;}
+.event_anniversary_wrap .inner {height:452px; margin:0 auto; max-width:1366px; background:url(../../img/portal/main/event_a_year_anniversary.png) center center no-repeat;background-size:cover;}
+.event_anniversary_wrap .inner article {position:relative; height:100%; display:flex; flex-direction:column; width:830px; box-sizing:border-box; padding:0;margin:0 auto;}
+.event_anniversary_wrap .inner article > p {text-indext:-99999px; font-size:0; overflow:hidden; width:100%;}
+.event_anniversary_wrap .inner article > .btn_link {text-indent:-99999px; overflow:hidden; font-size:0; margin: 280px 0 0 120px; width:426px; height:70px; background:url(../../img/portal/main/btn_a_year_anniversary.png) center top no-repeat;background-size:cover; }
+
+/* mobile */
+@media screen and (max-width: 1024px) {
+    #wrap {min-width:auto;}
+    .visual_wrap {height:40.8333rem; padding-bottom:0; background-position:50% 0; background-size:cover;}
+    .visual_wrap .txt_main_visual {top:14.5833rem}
+    .visual_wrap .txt_main_visual .txt_inner {width:100%;}
+    .visual_wrap .txt_main_visual .main_title {text-align:center; font-size:2.916rem; line-height:1.285;}
+    .visual_wrap .txt_main_visual .main_title img {max-width: 15.5833rem;}
+    .visual_wrap .txt_main_visual .main_title .mob_none {display: none;}
+    .visual_wrap .txt_main_visual .main_title .mob_block {display: block;}
+    .visual_wrap .txt_main_visual .desc {text-align:center; font-size:1.25rem; line-height:1.6; margin: 1.25rem 0;}
+    .visual_wrap .txt_main_visual .btn_wrap {margin: 1.5rem 1.25rem 0;}
+    .visual_wrap .txt_main_visual .btn_wrap .btn {width: 49.2%;  max-width: 12.916rem; height: 3.75rem; font-size: 1rem; line-height: 3.75rem; margin:0 0.2083rem;}
+    .visual_wrap .txt_main_visual .btn_wrap .floatingBanner { width: 49.2%;  max-width: 12.916rem; height: 3.75rem; margin:0 0.2083rem; }
+    .visual_wrap .txt_main_visual .btn_wrap .floatingBanner .btn { margin:0 0.2083rem; }
+    .visual_wrap .txt_main_visual .btn_wrap .btn_grd_yellow {margin:0 0.4166rem;}
+    .visual_wrap .video_wrap {display:none;}
+    .visual_wrap .video_wrap video {display:none; right:auto; bottom:auto; left:50%; top:50%; transform:translate(-50%, -50%); width:auto;}
+    .visual_wrap .btn_play { width: 2.416rem; height:2.916rem; background-size: 33.33rem 33.33rem; background-position: -30.833rem -7.5rem;}
+
+    section .inner_sec {width:100%;}
+    .news_wrap .inner_sec {padding:2.2916rem 0 6.25rem 0;}
+    .news_list {padding:0 2.291rem; box-sizing:border-box;}
+    .news_list .owl-stage-outer {padding: 0;}
+    .news_list .news_item .label_area .tag_label {font-size: 0.9166rem; height:1.875rem; line-height: 1.875rem; padding: 0 1rem; min-width: 6.25rem;}
+    .news_list .news_item .img_area {height:13.75rem;}
+    .news_list .news_item .icon {top:13.75rem; width:4.041rem; height:4.041rem; margin:-2.02rem 0 0 -2.02rem; }
+    .news_list .news_item .icon:before {background-size:66.666rem 66.666rem;}
+    .news_list .news_item .icon.ico_1:before {width:1.25rem; height:1.416rem; background-position:-3.791rem 0;}
+    .news_list .news_item .icon.ico_2:before {width:1.25rem; height:1.375rem; background-position:-7.166rem 0;}
+    .news_list .news_item .icon.ico_3:before {width:1.333rem; height:1.416rem; background-position:-5.5rem 0;}
+    .news_list .news_item .icon.ico_4:before {width:1.416rem; height:1.416rem; background-position:-5.0416rem -53.875rem;}
+    .news_list .news_item .icon.ico_5:before {width:1.833rem; height:1.666rem; background-position:-6.8333rem -53.875rem;}
+    .news_list .news_item .row {height:auto; padding:2.8333rem 1.458rem 1.75rem 1.458rem; box-sizing:border-box;}
+    .news_list .news_item .row:before {display:none;}
+    .news_list .news_item .title_area {max-height:3.1rem;}
+    .news_list .news_item strong.title {max-height:3.1rem; font-size:1.291rem; line-height:1.2;}
+    .news_list .news_item .desc_area {height:2.5rem; margin-top:0.75rem;}
+    .news_list .news_item span.desc {font-size:0.875rem; line-height:1.42;}
+    .news_list .news_item span.desc:after {margin-top:0.6em;}
+    .news_list .news_item .date {font-size: 0.8333rem; margin-top:1rem;}
+
+
+    .news_list.owl-carousel .owl-item.active.center {transform: translateY(0); box-shadow:none;}
+    .news_list.owl-carousel .owl-item.active.center .news_item a { background-color: #f2f2f2;}
+    .news_list.owl-carousel .owl-item.active.center .news_item span.desc:after {background-color:#f2f2f2;}
+    .news_list button[role="presentation"].owl-prev, .news_list button[role="presentation"].owl-next {width:3.541rem; height:3.541rem; margin-top:-1.77rem; background-color:#fff; box-shadow:0px 10px 20px 0px rgba(0, 0, 0, 0.2); top:50%; border:0;}
+    .news_list button[role="presentation"]:before {background-size:33.333rem 33.333rem;}
+    .news_list button[role="presentation"].owl-prev {left:0; background-color: #fff;}
+    .news_list button[role="presentation"].owl-prev:before {width:0.916rem; height:0.916rem; border-left:2px solid #474747; border-top:2px solid #474747;}
+    .news_list button[role="presentation"].owl-next {right:0; background-color: #fff;}
+    .news_list button[role="presentation"].owl-next:before {width:0.916rem; height:0.916rem; border-left:2px solid #474747; border-top:2px solid #474747;}
+    .news_list.col3 .news_item {width:100%;}
+    .news_list .owl-dots {display:none;}
+
+    /* event_section */
+    .event_section  {height:auto; background-image: url(../../img/portal/main/m_main_event_section_bg.jpg);}
+    .event_section > .inner {max-width:630px;}
+    .event_section .event_ban {margin-bottom: 0.833rem;}
+    .event_section .event_ban > a {height:10.8333rem; padding: 2.5rem 2.0833rem;}
+    .event_section .event_ban > a .mob_block {display: block;}
+    .event_section .event_ban > a:before {left: -0.33rem; top:-0.33rem; width:4.4166rem; height: 4.4166rem; -webkit-background-size: cover;  background-size: cover;}
+    .event_section .event_ban > a .title_wrap .desc {font-size: 1rem; margin-bottom: 0.5833rem;}
+    .event_section .event_ban > a .title_wrap .title {font-size:1.5rem;}
+    .event_section .title_wrap:after {width: 3.625rem; height: 0.458rem; margin-top: 1.0833rem;}
+
+    .event_section .event_list li {float:none; width:100%; margin: 0.833rem 0 0;}
+    .event_section .event_list li a {height:6.66rem; padding: 1.25rem;}
+    .event_section .event_list .title_wrap .title {font-size: 1.4166rem; margin-bottom: 0.4166rem;}
+    .event_section .event_list .title_wrap .desc {font-size: 0.833rem;}
+    .event_section .event_list .title_wrap:after {margin: 1rem auto 0;}
+
+
+    .event_section .event_ban01 {background-image: url(../../img/portal/main/m_main_event_section_ban01_bg.jpg);}
+    .event_section .event_ban02 {background-image: url(../../img/portal/main/m_main_event_section_ban02_bg.jpg);}
+    .event_section .event_ban03 {background-image: url(../../img/portal/main/m_main_event_section_ban03_bg.jpg);}
+    .event_section .event_ban04 {background-image: url(../../img/portal/main/m_main_event_section_ban04_bg.jpg);}
+    .event_section .event_ban05 {background-image: url(../../img/portal/main/m_main_event_section_ban05_bg.jpg);}
+
+
+
+
+    .event_banner_wrap {height:auto; background-color:#2c2f3e;}
+    .event_banner_wrap .shop_area {float:none; width:100%; transform:translateY(-3.958rem); box-sizing:border-box;}
+    .event_banner_wrap .shop_area .cash_list {height:auto; padding:0 2.2916rem; box-sizing:border-box;}
+    .event_banner_wrap .benefit_area {float:none; width:100%; height:auto; margin-top:0.8333rem; transform:translateY(-3.958rem); padding:0 2.2916rem; background-color:#2c2f3e; text-align:left;}
+    .event_banner_wrap .benefit_area .inner {display:block; width:100%; padding-right:0; max-width:100%; min-width:auto;}
+    .event_banner_wrap .cash_item {height:18.75rem;}
+    .event_banner_wrap .cash_item a {display:none;}
+    .event_banner_wrap .cash_item a.mob_view_item {display:block;}
+    .event_banner_wrap .shop_area .owl-nav {position:static;}
+    .event_banner_wrap .shop_area .owl-nav > button[role="presentation"] {position:absolute; top:50%; transform:translateY(-50%); width:3.541rem; height:3.541rem; background-color:#fff;}
+    .event_banner_wrap .shop_area .owl-nav > button[role="presentation"].owl-prev {left:0;}
+    .event_banner_wrap .shop_area .owl-nav > button[role="presentation"].owl-prev:before {width:0.916rem; height:0.916rem; border-left:2px solid #474747; border-top:2px solid #474747;}
+    .event_banner_wrap .shop_area .owl-nav > button[role="presentation"].owl-next {right:0; border:1px solid rgba(255, 255, 255, 0.2);}
+    .event_banner_wrap .shop_area .owl-nav > button[role="presentation"].owl-next:before {width:0.916rem; height:0.916rem; border-left:2px solid #474747; border-top:2px solid #474747;}
+    .event_banner_wrap .shop_area .count_area {display:none;}
+    .note_gm {float:none; width:100%; background-color:#3c4366;}
+    .note_gm a {position:relative; display: box; display: -webkit-box; display: -moz-box; display: -webkit-flex; display: -ms-flexbox; display: -moz-flex; display: -o-flex; display: flex; -webkit-align-items: center; -ms-align-items: center; -moz-align-items: center; -o-align-items: center; align-items: center; -webkit-justify-content: flex-start; -ms-justify-content: flex-start; -moz-justify-content: flex-start; -o-justify-content: flex-start; justify-content: flex-start; -ms-flex-align: center; height:3.333rem; padding:0 1.583rem;}
+    .note_gm .img_area {display:none;}
+    .note_gm .desc {position:static; width:100%; height:auto; padding:0;}
+    .note_gm .desc:before {left:auto; bottom:auto; right:1rem; top:50%; transform:translate(0, -50%) skewX(55deg); width:3.625rem; height:0.458rem; border-color:#99a2b1;}
+    .note_gm .desc strong.title {width:80%; padding:0; font-size:0.958rem; color:#f1f2f8; text-align:left; overflow:hidden; text-overflow:ellipsis; word-wrap:normal; white-space:nowrap;}
+    .note_gm .desc strong.title:before {display:none;}
+    .note_gm .desc strong.title:after {display:none;}
+    .note_gm .desc strong.title br {display:none;}
+    .benefit_list {float:none; width:100%; margin-top:0.0833rem;}
+    .benefit_list li {height:auto; margin-top:0.0833rem; background-color:#3c4366;}
+    .benefit_list li > a {position:relative; padding: display: box; display: -webkit-box; display: -moz-box; display: -webkit-flex; display: -ms-flexbox; display: -moz-flex; display: -o-flex; display: flex; -webkit-align-items: center; -ms-align-items: center; -moz-align-items: center; -o-align-items: center; align-items: center; -webkit-justify-content: flex-start; -ms-justify-content: flex-start; -moz-justify-content: flex-start; -o-justify-content: flex-start; justify-content: flex-start; -ms-flex-align: center; height:3.333rem; padding:0 1.583rem;}
+    .benefit_list li > a:before {display:none;}
+    .benefit_list li > a:after {left:auto; bottom:auto; right:1rem; top:50%; transform:translate(0, -50%) skewX(55deg); width:3.625rem; height:0.458rem; border-right:2px solid #99a2b1; border-bottom:1px solid #99a2b1;}
+    .benefit_list li strong.title {width:80%; margin:0; font-size:0.958rem; color:#f1f2f8; text-align:left; overflow:hidden; text-overflow:ellipsis; word-wrap:normal; white-space:nowrap;}
+    .benefit_list li span.desc {display:none;}
+
+    .class_mmorpg_wrap {height:41.66rem; padding:0 1.25rem; background-image:url(../../img/portal/main/m_main_world_class.jpg);}
+    .class_mmorpg_wrap h3 {padding-top:3.66rem; font-size:2.291rem; line-height:1.272;}
+    .class_mmorpg_wrap h3 span.mob_block {display:block;}
+    .class_mmorpg_wrap .h3_desc {margin-top:1.666rem; font-size:0.833rem; line-height:1.5;}
+    .class_mmorpg_wrap .h3_desc span.mob_block {display:block;}
+    .class_mmorpg_wrap .h3_desc br {display:none;}
+    .class_mmorpg_wrap .thumb_nail_area {width:100%; height:auto; margin-top:3.125rem; font-size:0;}
+    .class_mmorpg_wrap .thumb_nail_area .big_thumb {position:static; width:100%; height:9.25rem; transform:translate(0, 0);}
+    .class_mmorpg_wrap .thumb_nail_area .sml_thumb {display:inline-block; position:static; width:50%; height:9.25rem;}
+    .class_mmorpg_wrap .thumb_nail_area .sml_thumb img {width:100%;}
+    .class_mmorpg_wrap .thumb_nail_area .view_movie:after {right:0.5rem; bottom:0.5rem; width:2rem; height:2.416rem; background-size:33.333rem 33.333rem; background-position:-9.375rem -10.125rem;}
+    .class_mmorpg_wrap .thumb_nail_area .view_img:after {right:0.5rem; bottom:0.5rem; width:2.083rem; height:2.083rem; background-size:33.333rem 33.333rem; background-position:-5.791rem -10.125rem;}
+
+    .class_mmorpg_wrap .btn_more {width:11.25rem; height:3.125rem; font-size:0.916rem; line-height:3rem;}
+
+    .character_wrap {height:45.833rem; background-size:cover;}
+    .character_list .character_item {background-position: 50% 0; background-repeat: no-repeat; background-size:cover;}
+    .character_list .character_item.character_0 {background-image:url(../../img/portal/main/m_main_character_class_0.jpg);} /* WARRIOR */
+    .character_list .character_item.character_4 {background-image:url(../../img/portal/main/m_main_character_class_4.jpg);} /* RANGER */
+    .character_list .character_item.character_12 {background-image:url(../../img/portal/main/m_main_character_class_12.jpg);} /* GIANT */
+    .character_list .character_item.character_31 {background-image:url(../../img/portal/main/m_main_character_class_31.jpg);} /* WITCH */
+    .character_list .character_item.character_24 {background-image:url(../../img/portal/main/m_main_character_class_24.jpg);} /* VALKYRIE */
+    .character_list .character_item.character_16 {background-image:url(../../img/portal/main/m_main_character_class_16.jpg);} /* TAMER */
+    .character_list .character_item.character_27 {background-image:url(../../img/portal/main/m_main_character_class_27.jpg);} /* DARK_KNIGHT */
+    .character_list .character_item.character_19 {background-image:url(../../img/portal/main/m_main_character_class_19.jpg);} /* STRIKER */
+    .character_list .character_item.character_8 {background-image:url(../../img/portal/main/m_main_character_class_8.jpg);} /* SORCERER */
+    .character_list .character_item.character_20 {background-image:url(../../img/portal/main/m_main_character_class_20.jpg);} /* MUSA */
+    .character_list .character_item.character_28 {background-image:url(../../img/portal/main/m_main_character_class_28.jpg);} /* WIZARD */
+    .character_list .character_item.character_25 {background-image:url(../../img/portal/main/m_main_character_class_25.jpg);} /* KUNOICHI */
+    .character_list .character_item.character_26 {background-image:url(../../img/portal/main/m_main_character_class_26.jpg);} /* NINJA */
+    .character_list .character_item.character_23 {background-image:url(../../img/portal/main/m_main_character_class_23.jpg);} /* MYSTIC */
+    .character_list .character_item.character_11 {background-image:url(../../img/portal/main/m_main_character_class_11.jpg);} /* LAHN */
+    .character_list .character_item.character_29 {background-image:url(../../img/portal/main/m_main_character_class_29.jpg);} /* ARCHER */
+    .character_list .character_item.character_21 {background-image:url(../../img/portal/main/m_main_character_class_21.jpg);} /* MAEHWA */
+    .character_list .character_item.character_17 {background-image:url(../../img/portal/main/m_main_character_class_17.jpg);} /* SHAI */
+    .character_list .character_item.character_5 {background-image:url(../../img/portal/main/m_main_character_class_5.jpg);} /* GUARDIAN */
+
+    .character_wrap.character_0 {background-image:url(../../img/portal/main/m_main_character_class_0.jpg);} /* WARRIOR */
+    .character_wrap.character_4 {background-image:url(../../img/portal/main/m_main_character_class_4.jpg);} /* RANGER */
+    .character_wrap.character_12 {background-image:url(../../img/portal/main/m_main_character_class_12.jpg);} /* GIANT */
+    .character_wrap.character_31 {background-image:url(../../img/portal/main/m_main_character_class_31.jpg);} /* WITCH */
+    .character_wrap.character_24 {background-image:url(../../img/portal/main/m_main_character_class_24.jpg);} /* VALKYRIE */
+    .character_wrap.character_16 {background-image:url(../../img/portal/main/m_main_character_class_16.jpg);} /* TAMER */
+    .character_wrap.character_27 {background-image:url(../../img/portal/main/m_main_character_class_27.jpg);} /* DARK_KNIGHT */
+    .character_wrap.character_19 {background-image:url(../../img/portal/main/m_main_character_class_19.jpg);} /* STRIKER */
+    .character_wrap.character_8 {background-image:url(../../img/portal/main/m_main_character_class_8.jpg);} /* SORCERER */
+    .character_wrap.character_20 {background-image:url(../../img/portal/main/m_main_character_class_20.jpg);} /* MUSA */
+    .character_wrap.character_28 {background-image:url(../../img/portal/main/m_main_character_class_28.jpg);} /* WIZARD */
+    .character_wrap.character_25 {background-image:url(../../img/portal/main/m_main_character_class_25.jpg);} /* KUNOICHI */
+    .character_wrap.character_26 {background-image:url(../../img/portal/main/m_main_character_class_26.jpg);} /* NINJA */
+    .character_wrap.character_23 {background-image:url(../../img/portal/main/m_main_character_class_23.jpg);} /* MYSTIC */
+    .character_wrap.character_11 {background-image:url(../../img/portal/main/m_main_character_class_11.jpg);} /* LAHN */
+    .character_wrap.character_29 {background-image:url(../../img/portal/main/m_main_character_class_29.jpg);} /* ARCHER */
+    .character_wrap.character_21 {background-image:url(../../img/portal/main/m_main_character_class_21.jpg);} /* MAEHWA */
+    .character_wrap.character_17 {background-image:url(../../img/portal/main/m_main_character_class_17.jpg);} /* SHAI */
+    .character_wrap.character_5 {background-image:url(../../img/portal/main/m_main_character_class_5.jpg);} /* GUARDIAN */
+
+    .classes {top:4.916rem; transform:translate(-50%, 0); width:100%; padding:0 2.2916rem; box-sizing:border-box;}
+    .classes h3 {font-size:2.708rem; line-height:1;}
+    .classes .h3_desc {font-size:0.833rem; line-height:1.5;}
+    .classes .btn_more {width:6.041rem; height:1.875rem; margin-top:1.083rem;}
+    .classes .btn_more:before {bottom:auto; top:50%; width:2.833rem; height:0.458rem; transform:translate(-50%, -50%) skewX(55deg); background-color:transparent; border-right:2px solid #fff; border-bottom:1px solid #fff;}
+
+    .character_list .owl-nav button[role="presentation"] {width:3.541rem; height:3.541rem; background-color:#40373c;}
+    .character_list .owl-nav button[role="presentation"].owl-prev {left:0;}
+    .character_list .owl-nav button[role="presentation"].owl-prev:before {left:55%; width:0.916rem; height:0.916rem; border-left:2px solid #fff; border-top:2px solid #fff;}
+    .character_list .owl-nav button[role="presentation"].owl-next {right:0;}
+    .character_list .owl-nav button[role="presentation"].owl-next:before {left:45%; width:0.916rem; height:0.916rem; border-left:2px solid #fff; border-top:2px solid #fff;}
+
+
+    .character_wrap .btn_wrap a {width:3.541rem; height:3.541rem; background-color:#40373c;}
+    .character_wrap .btn_wrap a.btn_prev {left:0;}
+    .character_wrap .btn_wrap a.btn_prev:before {left:55%; width:0.916rem; height:0.916rem; border-left:2px solid #fff; border-top:2px solid #fff;}
+    .character_wrap .btn_wrap a.btn_next {right:0;}
+    .character_wrap .btn_wrap a.btn_next:before {left:45%; width:0.916rem; height:0.916rem; border-left:2px solid #fff; border-top:2px solid #fff;}
+    .character_wrap .thumb_nail_area {left:0; bottom:3.541rem; transform:translate(0, 0); width:100%;}
+    .character_wrap .thumb_nail_area ul {overflow-x:auto; white-space:nowrap; overflow-y:hidden;}
+    .character_wrap .thumb_nail_area ul li {float:none; display:inline-block; width:3.416rem; height:3.416rem; margin-top:0.208rem; margin-left:0.208rem;}
+
+    .character_wrap .thumb_nail_area.type2 {bottom:5%; left:50%; transform:translate(-50%, 0);}
+    .character_wrap .thumb_nail_area.type2 ul {display:box;display:-webkit-box;display:-moz-box;  display: -webkit-flex; display: -ms-flexbox;
+    display: -webkit-flex; display: -ms-flexbox; display: -moz-flex; display: -o-flex; display: flex;
+    -webkit-align-items: center; -ms-align-items: center; -moz-align-items: center; -o-align-items: center; align-items: center;
+    -webkit-justify-content: center; -ms-justify-content: center; -moz-justify-content: center; -o-justify-content: center; justify-content: center; -ms-flex-align: center; overflow:inherit; white-space:normal; flex-wrap:wrap; padding:0 1.25rem;}
+    .character_wrap .thumb_nail_area.type2 ul li {margin:0.25rem;}
+    .character_wrap .thumb_nail_area.type2 ul:after {display:none;}
+
+    .character_wrap .thumb_nail_area ul li a:before {background-size:30.25rem 22.583rem;}
+    .character_wrap .thumb_nail_area ul li a.character_0:before {background-position:0 0;} /* WARRIOR */
+    .character_wrap .thumb_nail_area ul li a.character_4:before {background-position:-3.833rem 0;} /* RANGER */
+    .character_wrap .thumb_nail_area ul li a.character_12:before {background-position:-7.583rem 0;} /* GIANT */
+    .character_wrap .thumb_nail_area ul li a.character_31:before {background-position:-11.541rem 0;} /* WITCH */
+    .character_wrap .thumb_nail_area ul li a.character_24:before {background-position:-15.333rem 0;} /* VALKYRIE */
+    .character_wrap .thumb_nail_area ul li a.character_16:before {background-position:-19.208rem 0;} /* TAMER */
+    .character_wrap .thumb_nail_area ul li a.character_27:before {background-position:-23rem 0;} /* DARK_KNIGHT */
+    .character_wrap .thumb_nail_area ul li a.character_19:before {background-position:-26.875rem 0;} /* STRIKER */
+    .character_wrap .thumb_nail_area ul li a.character_8:before {background-position:0 -3.833rem;} /* SORCERER */
+    .character_wrap .thumb_nail_area ul li a.character_20:before {background-position:-3.833rem -3.833rem;} /* MUSA */
+    .character_wrap .thumb_nail_area ul li a.character_28:before {background-position:-7.583rem -3.833rem;} /* WIZARD */
+    .character_wrap .thumb_nail_area ul li a.character_25:before {background-position:-11.541rem -3.833rem;} /* KUNOICHI */
+    .character_wrap .thumb_nail_area ul li a.character_26:before {background-position:-15.333rem -3.833rem;} /* NINJA */
+    .character_wrap .thumb_nail_area ul li a.character_23:before {background-position:-19.208rem -3.833rem;} /* MYSTIC */
+    .character_wrap .thumb_nail_area ul li a.character_11:before {background-position:-23rem -3.833rem;} /* LAHN */
+    .character_wrap .thumb_nail_area ul li a.character_29:before {background-position:-26.875rem -3.833rem;} /* ARCHER */
+    .character_wrap .thumb_nail_area ul li a.character_21:before {background-position:0 -7.666rem;} /* MAEHWA */
+    .character_wrap .thumb_nail_area ul li a.character_17:before {background-position:-3.833rem -7.666rem;} /* SHAI */
+    .character_wrap .thumb_nail_area ul li a.character_5:before {background-position:-7.583rem -7.666rem;} /* GUARDIAN */
+
+    .character_wrap .thumb_nail_area ul li.active a.character_0:before {background-position:0 -11.5rem;} /* WARRIOR */
+    .character_wrap .thumb_nail_area ul li.active a.character_4:before {background-position:-3.833rem -11.5rem;} /* RANGER */
+    .character_wrap .thumb_nail_area ul li.active a.character_12:before {background-position:-7.583rem -11.5rem;} /* GIANT */
+    .character_wrap .thumb_nail_area ul li.active a.character_31:before {background-position:-11.541rem -11.5rem;} /* WITCH */
+    .character_wrap .thumb_nail_area ul li.active a.character_24:before {background-position:-15.333rem -11.5rem;} /* VALKYRIE */
+    .character_wrap .thumb_nail_area ul li.active a.character_16:before {background-position:-19.208rem -11.5rem;} /* TAMER */
+    .character_wrap .thumb_nail_area ul li.active a.character_27:before {background-position:-23rem -11.5rem;} /* DARK_KNIGHT */
+    .character_wrap .thumb_nail_area ul li.active a.character_19:before {background-position:-26.875rem -11.5rem;} /* STRIKER */
+    .character_wrap .thumb_nail_area ul li.active a.character_8:before {background-position:0 -15.333rem;} /* SORCERER */
+    .character_wrap .thumb_nail_area ul li.active a.character_20:before {background-position:-3.833rem -15.333rem;} /* MUSA */
+    .character_wrap .thumb_nail_area ul li.active a.character_28:before {background-position:-7.583rem -15.333rem;} /* WIZARD */
+    .character_wrap .thumb_nail_area ul li.active a.character_25:before {background-position:-11.541rem -15.333rem;} /* KUNOICHI */
+    .character_wrap .thumb_nail_area ul li.active a.character_26:before {background-position:-15.333rem -15.333rem;} /* NINJA */
+    .character_wrap .thumb_nail_area ul li.active a.character_23:before {background-position:-19.208rem -15.333rem;} /* MYSTIC */
+    .character_wrap .thumb_nail_area ul li.active a.character_11:before {background-position:-23rem -15.333rem;} /* LAHN */
+    .character_wrap .thumb_nail_area ul li.active a.character_29:before {background-position:-26.875rem -15.333rem;} /* ARCHER */
+    .character_wrap .thumb_nail_area ul li.active a.character_21:before {background-position:0 -19.166rem;} /* MAEHWA */
+    .character_wrap .thumb_nail_area ul li.active a.character_17:before {background-position:-3.833rem -19.166rem;} /* SHAI */
+    .character_wrap .thumb_nail_area ul li.active a.character_5:before {background-position:-7.583rem -19.166rem;} /* GUARDIAN */
+
+
+    .character_wrap .thumb_nail_area ul li:nth-child(9n+1) {margin-left:0.208rem;}
+    .video_area video {right:auto; bottom:auto; left:50%; top:50%; transform:translate(-50%, -50%);}
+
+    .multi_media_wrap {height:auto; padding:0 2.2916rem 3.125rem 2.2916rem;}
+    .multi_media_wrap h3 {padding-top:3.5rem; font-size:2.791rem; line-height:1;}
+    .multi_media_wrap .h3_desc {margin-top:1rem; font-size:0.875rem; line-height:1.428; letter-spacing:-1px;}
+    .multi_media_wrap .media_list_area {width:100%;}
+    .multi_media_wrap .media_list_area .inner {float:none; width:100%; height:auto;}
+    .multi_media_wrap .media_list_area a {height:10rem;}
+    .multi_media_wrap .media_list_area a img {display:block; width:100%; position:absolute; left:50%; top:50%; transform:translate(-50%, -50%);}
+    .multi_media_wrap .media_list_area a.img_big img {height:auto;}
+    .multi_media_wrap .media_list_area .thumb {width:49.84%; height:auto; margin-top:0.083rem; }
+    .multi_media_wrap .media_list_area .thumb:last-child {margin-left:0.31%;}
+    .multi_media_wrap .media_list_area .thumb.wide {height:auto;}
+    .multi_media_wrap .media_list_area span.title {left:0.625rem; bottom:0.75rem; font-size:0.708rem; width:80%;}
+    .multi_media_wrap .media_list_area a.view_img:after {width:2.791rem; height:2.875rem; background-size:33.333rem 33.333rem; background-position:-5.791rem -12.75rem;}
+    .multi_media_wrap .media_list_area a.view_movie:after {width:2.458rem; height:3.125rem; background-size:33.333rem 33.333rem; background-position:-9.375rem -12.75rem;}
+
+    .joinus_wrap {height:auto; padding: 4.083rem 0; background-image:url(../../img/portal/main/m_main_join_us.jpg);}
+    .joinus_wrap .mob_block {display:block;}
+    .joinus_wrap .inner {position:static; display:block; width:100%; padding:0 2.2916rem; transform:translate(0, 0); box-sizing:border-box; text-align:center;}
+    .joinus_wrap .inner h3 {font-size:2.291rem;}
+    .joinus_wrap .inner .h3_desc {margin-top:0.75rem; font-size:0.791rem;}
+    .joinus_wrap .inner .btn_wrap {margin-top:1.25rem;}
+    .joinus_wrap .inner .btn_wrap .btn {width:49.2%; max-width:12.916rem; height:3.75rem; font-size:0.916rem; line-height:3.75rem;}
+    .joinus_wrap .inner .btn_wrap .btn + .btn {margin-left:1.6%;}
+
+    /* main a year anniversary section */
+    .event_anniversary_wrap {position:relative; height:33.478rem; width:100%; background:url(../../img/portal/main/mo_bg_a_year_anniversary.jpg) center top no-repeat; background-size:cover;}
+    .event_anniversary_wrap::before,
+    .event_anniversary_wrap::after {content:''; display:block; position:absolute; bottom:0; z-index:1;background-position:left top; background-repeat:no-repeat;background-size:cover; pointer-events:none;}
+    .event_anniversary_wrap::before {left:0; width:7.434rem; height:12.695rem; background-image:url(../../img/portal/main/mo_a_year_anniversary_float_left.png);}
+    .event_anniversary_wrap::after {right:0; background-image:url(../../img/portal/main/mo_a_year_anniversary_float_right.png); width:15rem; height:32.304rem; }
+    .event_anniversary_wrap .inner {height:33.478rem; max-width:31.173rem; background-image:url(../../img/portal/main/mo_event_a_year_anniversary.png);}
+    .event_anniversary_wrap .inner article {position:relative; height:100%; width:100%;}
+    .event_anniversary_wrap .inner article > .btn_link {padding:0; margin:23.043rem auto 0; width:16.913rem; height:3.695rem; background:url(../../img/portal/main/mo_btn_a_year_anniversary.png) left top no-repeat; background-size:cover; }
+
+}
+
+/* tablet 가로 모드 지정 분기 */
+@media only screen and (max-height: 768px) and (min-width: 768px) and (orientation: landscape) {
+  .news_list .news_item .row {height:11.708rem;}
+  .news_list .news_item .img_area {height:10.25rem;}
+  .news_list .news_item .icon {top:10.25rem;}
+  .news_list .news_item strong.title {height:auto; max-height:2.4rem; font-size:1rem;}
+  .news_list .news_item span.desc {font-size:0.675rem;}
+}
+
+/* mobile 가로모드 지정 분기 */
+@media only screen and (max-height: 480px) and (min-width: 480px) and (orientation: landscape) {
+  /*.character_wrap {height:91.666rem;}*/
+}
+
+@media screen and (min-width:1025px){
+
+    /* hover */
+    .visual_wrap .txt_main_visual .btn_wrap .btn:hover {transform: translateY(-6px);}
+    .visual_wrap .btn_play:hover {transform:translateY(-10px);}
+    .event_section a:hover:after {opacity: 1;}
+    .news_list.owl-carousel .owl-item.active.center .news_item a:hover {transform:translateY(0); background-color:#fff;}
+    .news_list .news_item:hover a {transform:translateY(-36px); background-color:#fff; box-shadow:0px 10px 20px 0px rgba(0, 0, 0, 0.2);}
+    .news_list .news_item:hover a strong.title:after {background-color:#fff; }
+    .news_list .news_item:hover a span.desc:after {background-color:#fff;}
+    .news_list button[role="presentation"]:hover {background-color:#e9e6e1;}
+    .note_gm:hover {background-color:#4d628f;}
+    .note_gm:hover .desc strong.title:after {background-color:#4d628f;}
+    .note_gm:hover .img_area {height:190px;}
+    .note_gm:hover .img_area:after {opacity:1;}
+    .note_gm:hover .desc {height:140px;}
+    .benefit_list li:hover:before {transform:translateX(0);}
+    .event_banner_wrap .shop_area .owl-nav > button[role="presentation"]:hover {background-color:#fff;}
+    .event_banner_wrap .shop_area .owl-nav > button[role="presentation"].owl-prev:hover:before {border-left:2px solid #474747; border-top:2px solid #474747;}
+    .event_banner_wrap .shop_area .owl-nav > button[role="presentation"].owl-next:hover:before {border-left:2px solid #474747; border-top:2px solid #474747;}
+    .class_mmorpg_wrap .thumb_nail_area a:hover:before {opacity:1;}
+    .classes .btn_more:hover {background-color:rgba(255, 255, 255, 0.8);}
+    .classes .btn_more:hover:before {border-right:2px solid #000; border-bottom:1px solid #000;}
+    .character_wrap .btn_wrap a.btn_prev:hover:before {border-left:2px solid #fff; border-top:2px solid #fff;}
+    .character_wrap .btn_wrap a.btn_next:hover:before {border-left:2px solid #fff; border-top:2px solid #fff;}
+    .character_list .owl-nav button[role="presentation"]:hover:before {border-left:2px solid #fff; border-top:2px solid #fff;}
+
+    .character_wrap .thumb_nail_area ul li:hover a {transform:scale(1.2); border:1px solid #fff;}
+    .character_wrap .thumb_nail_area ul li:hover a.character_0:before {background-position:0 -276px;} /* WARRIOR */
+    .character_wrap .thumb_nail_area ul li:hover a.character_4:before {background-position:-92px -276px;} /* RANGER */
+    .character_wrap .thumb_nail_area ul li:hover a.character_12:before {background-position:-182px -276px;} /* GIANT */
+    .character_wrap .thumb_nail_area ul li:hover a.character_31:before {background-position:-277px -276px;} /* WITCH */
+    .character_wrap .thumb_nail_area ul li:hover a.character_24:before {background-position:-368px -276px;} /* VALKYRIE */
+    .character_wrap .thumb_nail_area ul li:hover a.character_16:before {background-position:-461px -276px;} /* TAMER */
+    .character_wrap .thumb_nail_area ul li:hover a.character_27:before {background-position:-552px -276px;} /* DARK_KNIGHT */
+    .character_wrap .thumb_nail_area ul li:hover a.character_19:before {background-position:-645px -276px;} /* STRIKER */
+    .character_wrap .thumb_nail_area ul li:hover a.character_8:before {background-position:0 -368px;} /* SORCERER */
+    .character_wrap .thumb_nail_area ul li:hover a.character_20:before {background-position:-92px -368px;} /* MUSA */
+    .character_wrap .thumb_nail_area ul li:hover a.character_28:before {background-position:-182px -368px;} /* WIZARD */
+    .character_wrap .thumb_nail_area ul li:hover a.character_25:before {background-position:-277px -368px;} /* KUNOICHI */
+    .character_wrap .thumb_nail_area ul li:hover a.character_26:before {background-position:-368px -368px;} /* NINJA */
+    .character_wrap .thumb_nail_area ul li:hover a.character_23:before {background-position:-461px -368px;} /* MYSTIC */
+    .character_wrap .thumb_nail_area ul li:hover a.character_11:before {background-position:-552px -368px;} /* LAHN */
+    .character_wrap .thumb_nail_area ul li:hover a.character_29:before {background-position:-645px -368px;} /* ARCHER */
+    .character_wrap .thumb_nail_area ul li:hover a.character_21:before {background-position:0 -460px;} /* MAEHWA */
+    .character_wrap .thumb_nail_area ul li:hover a.character_17:before {background-position:-92px -460px;} /* SHAI */
+    .character_wrap .thumb_nail_area ul li:hover a.character_5:before {background-position:-182px -460px;} /* GUARDIAN */
+
+    .multi_media_wrap .media_list_area a:hover:before {opacity:1;}
+    .joinus_wrap .inner .btn_wrap .btn_blue:hover {background-color:#262b38;}
+    .joinus_wrap .inner .btn_wrap .btn_brown:hover {background-color:#69503d;}
+
+    .class_mmorpg_wrap .btn_more:hover {border-color:#fff; background-color:rgba(255, 255, 255, 0.8); color:#3d3d3d;}
+}
+
+@media screen (min-width:1025px) and (max-width:1600px){
+  .news_list button[role="presentation"].owl-prev {left:0; background-color:#e9e6e1;}
+  .news_list button[role="presentation"].owl-next {right:0; background-color:#e9e6e1;}
+}
+
+/* language  */
+/* ru */
+:lang(ru-RU) .visual_wrap .txt_main_visual .btn_wrap .btn_grd_yellow { display:flex; line-height:1.2; align-items:center; justify-content:center; }
+/* th */
+:lang(th-TH) .news_list .news_item strong.title { padding-top:5px; }
+:lang(th-TH) .benefit_list li > a { padding-top:16px; }
+:lang(th-TH) .benefit_list li strong.title { padding-top:3px; }
+:lang(th-TH) .benefit_list li span.desc { padding-top:3px; }
